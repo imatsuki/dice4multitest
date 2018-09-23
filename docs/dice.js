@@ -5,7 +5,7 @@ window.onload = function(){
     let tmp;
     for(let i=0; url[i]; i++) {
       tmp = url[i].split('=');
-      drawing(tmp[0].slice(1), decodeURIComponent(tmp[1]));
+      drawing(tmp[0].slice(6), decodeURIComponent(tmp[1]));
     }
   }else{
     return;
@@ -37,7 +37,7 @@ function drawing(rank, game){
     'beforeend', 
     "<p>第"+rank+"希望："+game+"</p>"
   );
-  document.title += "choice"+rank+"："+game+" ";
+  document.title += "第"+rank+"希望："+game+" ";
 }
 
 
