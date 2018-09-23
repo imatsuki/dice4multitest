@@ -22,7 +22,7 @@ function diceroll(){
   for(let i=0; i<3; i++){
     random = games[Math.floor(Math.random() * games.length)];
     drawing(i+1, random);
-    query[""+(i+1)+"希望："] = random;
+    query["第"+(i+1)+"希望："] = random;
     games = games.filter(n => n !== random);
   }
   window.history.pushState(
