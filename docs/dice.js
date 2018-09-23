@@ -22,7 +22,7 @@ function diceroll(){
   for(let i=0; i<3; i++){
     random = games[Math.floor(Math.random() * games.length)];
     drawing(i+1, random);
-    query["第"+(i+1)+"希望："] = random;
+    query["choice"+(i+1)] = random;
     games = games.filter(n => n !== random);
   }
   window.history.pushState(
@@ -37,7 +37,7 @@ function drawing(rank, game){
     'beforeend', 
     "<p>第"+rank+"希望："+game+"</p>"
   );
-  document.title += game;
+  document.title += "choice"+rank+"："+game+" ";
 }
 
 
