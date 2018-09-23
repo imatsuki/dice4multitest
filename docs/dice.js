@@ -37,7 +37,7 @@ function drawing(rank, game){
     'beforeend', 
     "<p>第"+rank+"希望："+game+"</p>"
   );
-  document.title += "第"+rank+"希望："+game+" ";
+  document.title += "第"+rank+"希望："+game+"　";
 }
 
 
