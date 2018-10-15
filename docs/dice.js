@@ -18,7 +18,7 @@ function diceroll(){
   document.getElementById('dice').textContent = '';
   let games;
   $.ajax({
-    url: "GAMES",
+    url: "games.txt",
     dataType:"text",
     async: false    
   }).then(
