@@ -16,7 +16,14 @@ window.onload = function(){
 function diceroll(){
   document.title = '';
   document.getElementById('dice').textContent = '';
-  let games = ["テラリア", "HoI4", "Civ5", "うさぎ"];
+  let games;
+  $.ajax({
+    url: "GAMES",
+    dataType:"text",
+    async: false    
+  }).then(
+    data => games = data.split(/\n/)
+  );
   let random;
   let query = {};
   for(let i=0; i<3; i++){
