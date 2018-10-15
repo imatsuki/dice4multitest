@@ -16,14 +16,11 @@ window.onload = function(){
 function diceroll(){
   document.title = '';
   document.getElementById('dice').textContent = '';
-  let games;
-  $.ajax({
+  let games = $.ajax({
     url: "games.txt",
     dataType:"text",
     async: false    
-  }).then(
-    (data) => {games = data.split(/\n/);}
-  );
+  }).responseText.split(/\n/);
   let random;
   let query = {};
   for(let i=0; i<3; i++){
