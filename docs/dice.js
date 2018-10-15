@@ -22,7 +22,7 @@ function diceroll(){
     dataType:"text",
     async: false    
   }).then(
-    data => games = data.split(/\n/)
+    (data) => {games = data.split(/\n/);}
   );
   let random;
   let query = {};
